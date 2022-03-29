@@ -31,7 +31,7 @@ use pocketmine\event\Listener;
 
 class Main extends PluginBase implements Listener{ //Added "implements Listener" because of the Listener event
 
-    public function onEnable(){
+    public function onEnable(): void {
         $this->getServer()->getPluginManager()->registerEvents($this,$this); // This is the new line 
         $this->getLogger()->info("Plugin Enabled");
     }
