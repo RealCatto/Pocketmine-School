@@ -48,7 +48,7 @@ public function onJoin(PlayerJoinEvent $event){
     $inv = $player->getInventory();  //Gets the player Inventory
 
     $this->getServer()->broadcastMessage("Welcome $name to my server");  //This broadcast a Message to the whole server  
-    $item = Item::get(345, 0, 1); //The item that you want to give
+    $item = Item::get(345, 0, 1); //The item that you want to give and don't forget to add use pocketmine\item\ItemFactory; or this will not work
     $inv->setItem(0, $item);  //This gives the item to the player, '0' means the first slot of the players hotbar so you can change to any slot
 }             
 ```
