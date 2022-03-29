@@ -28,16 +28,21 @@ public function testForm($player){
             case 0:
                 //First Button
                 //Here is where you add the code to what this button will do.
+                // Like here we are adding a simple command.
+                 $this->getServer()->dispatchCommand("Hub");
             break;
 
             case 1:
                 //Second Button
                 //Here is where you add the code to what this button will do.
+                //I'll be adding a simple Message.
+                $this->getPlayer()->sendMessasge("Hello World")
             break;
         }
     });
         
     $form->setTitle("Title of the form"); //This sets the title of the form
+    $form->setContent("your content for new line use \n Hello World")
     $form->addButton("First Button"); //This adds a button
     $form->addButton("Second Button");
     $player->sendForm($form); //This sends it to the player
