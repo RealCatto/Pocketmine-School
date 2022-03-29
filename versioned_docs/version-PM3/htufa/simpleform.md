@@ -35,8 +35,8 @@ public function testForm($player){
             case 1:
                 //Second Button
                 //Here is where you add the code to what this button will do.
-                //I'll be adding a simple Message.
-                $this->getPlayer()->sendMessasge("Hello World")
+                //I'll be adding a simple Message send to whole server.
+                $this->getPlayer()->broadcastMessasge("Hello World") 
             break;
         }
     });
